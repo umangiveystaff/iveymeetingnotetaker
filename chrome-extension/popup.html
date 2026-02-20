@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivey Meeting Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🎙️</span>
+        <div>
+          <div class="logo-title">Ivey Meeting Notes</div>
+          <div class="logo-sub">100% private · local AI</div>
+        </div>
+      </div>
+      <div class="status-badge" id="statusBadge">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </header>
+
+    <!-- Teams detection banner -->
+    <div class="teams-banner" id="teamsBanner" style="display:none">
+      <span class="banner-icon">⚠️</span>
+      <span>Open a Teams meeting tab first</span>
+    </div>
+
+    <!-- Recording controls -->
+    <div class="controls" id="controls">
+      <button class="btn btn-record" id="btnRecord">
+        <span class="btn-icon" id="btnIcon">●</span>
+        <span id="btnLabel">Start Recording</span>
+      </button>
+      <div class="timer" id="timer" style="display:none">
+        <span id="timerDisplay">00:00</span>
+        <span class="speaker-tag" id="currentSpeakerTag" style="display:none"></span>
+      </div>
+    </div>
+
+    <!-- Live transcript panel -->
+    <div class="panel" id="transcriptPanel" style="display:none">
+      <div class="panel-header">
+        <span>Live Transcript</span>
+        <span class="entry-count" id="entryCount">0 entries</span>
+      </div>
+      <div class="transcript-feed" id="transcriptFeed"></div>
+    </div>
+
+    <!-- Generate notes button -->
+    <div class="generate-row" id="generateRow" style="display:none">
+      <button class="btn btn-generate" id="btnGenerate">
+        <span>✨</span>
+        <span id="generateLabel">Generate Meeting Notes</span>
+      </button>
+    </div>
+
+    <!-- Notes panel -->
+    <div class="panel" id="notesPanel" style="display:none">
+      <div class="panel-header">
+        <span>Meeting Notes</span>
+        <div class="panel-actions">
+          <button class="icon-btn" id="btnDownloadMd" title="Download Markdown">⬇ MD</button>
+          <button class="icon-btn" id="btnDownloadTxt" title="Download text">⬇ TXT</button>
+          <button class="icon-btn" id="btnCopy" title="Copy to clipboard">📋</button>
+        </div>
+      </div>
+      <div class="notes-content" id="notesContent"></div>
+    </div>
+
+    <!-- Privacy footer -->
+    <footer class="footer">
+      <span>🔒 Audio processed locally · Ollama at localhost:11434</span>
+    </footer>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "ivey-meeting-notes",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Ivey Meeting Notes Chrome Extension — build tooling",
+    "scripts": {
+        "build": "node build.js",
+        "watch": "node build.js --watch"
+    },
+    "devDependencies": {
+        "esbuild": "^0.20.1"
+    },
+    "dependencies": {
+        "@xenova/transformers": "^2.17.1"
+    }
+}
