@@ -1,0 +1,14 @@
+﻿[
+  {
+    "id": "exec_summary_v1",
+    "name": "Executive Summary",
+    "format": "markdown",
+    "prompt": "Summarize the meeting into 5–7 bullet points focusing on decisions, blockers, owners, and next steps. Keep it concise and scannable."
+  },
+  {
+    "id": "action_items_v1",
+    "name": "Action Items (JSON)",
+    "format": "json",
+    "prompt": "From the transcript, extract ALL action items and output ONLY a valid JSON array. Each item must be: {\"title\":\"\",\"owner\":\"\",\"due\":\"YYYY-MM-DD\",\"notes\":\"\"}. Do not include any extra text."
+  }
+]

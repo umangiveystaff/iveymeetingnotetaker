@@ -1,0 +1,3 @@
+﻿[00:00] Speaker A: Let's ship the portal by March 1. Alex will own the API docs.
+[00:15] Speaker B: I'll review the UI copy and send edits by Wednesday.
+[00:30] Speaker C: Risk: auth integration might slip. We need a backup plan.
