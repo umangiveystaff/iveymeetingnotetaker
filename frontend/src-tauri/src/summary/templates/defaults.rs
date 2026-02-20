@@ -9,6 +9,9 @@ pub const DAILY_STANDUP: &str = include_str!("../../../templates/daily_standup.j
 /// Standard meeting notes template
 pub const STANDARD_MEETING: &str = include_str!("../../../templates/standard_meeting.json");
 
+/// Ivey meeting notes template with speaker attribution, blockers, and next steps
+pub const IVEY_MEETING: &str = include_str!("../../../templates/ivey_meeting.json");
+
 /// Registry of all built-in templates
 ///
 /// Maps template identifiers to their embedded JSON content
@@ -16,6 +19,7 @@ pub fn get_builtin_templates() -> Vec<(&'static str, &'static str)> {
     vec![
         ("daily_standup", DAILY_STANDUP),
         ("standard_meeting", STANDARD_MEETING),
+        ("ivey_meeting", IVEY_MEETING),
     ]
 }
 
@@ -30,13 +34,14 @@ pub fn get_builtin_template(id: &str) -> Option<&'static str> {
     match id {
         "daily_standup" => Some(DAILY_STANDUP),
         "standard_meeting" => Some(STANDARD_MEETING),
+        "ivey_meeting" => Some(IVEY_MEETING),
         _ => None,
     }
 }
 
 /// List all built-in template identifiers
 pub fn list_builtin_template_ids() -> Vec<&'static str> {
-    vec!["daily_standup", "standard_meeting"]
+    vec!["daily_standup", "standard_meeting", "ivey_meeting"]
 }
 
 #[cfg(test)]

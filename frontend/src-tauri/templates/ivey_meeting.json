@@ -1,0 +1,46 @@
+{
+    "name": "Ivey Meeting Notes",
+    "description": "Captures all meeting activity with per-speaker action items, decisions and blockers. Designed for Teams meetings with diarized transcripts.",
+    "sections": [
+        {
+            "title": "Summary",
+            "instruction": "Write a concise 2-3 sentence executive summary of the meeting. Include the meeting purpose, main outcome, and any critical decisions. Reference speaker names where known.",
+            "format": "paragraph"
+        },
+        {
+            "title": "Attendees",
+            "instruction": "List every speaker identified in the transcript. If speaker labels are SPEAKER_00, SPEAKER_01 etc., list them as-is and note their contributions. If real names appear in the transcript, use those.",
+            "format": "list",
+            "item_format": "- **[Name or SPEAKER_XX]**: [brief description of their role/contribution in the meeting]"
+        },
+        {
+            "title": "Key Decisions",
+            "instruction": "List every decision that was made or agreed upon during the meeting. Attribute each decision to the speaker who proposed or confirmed it.",
+            "format": "list",
+            "item_format": "- **[Decision]** — proposed by [Speaker] at [approx timestamp if available]"
+        },
+        {
+            "title": "Action Items",
+            "instruction": "Extract EVERY task, commitment or follow-up mentioned in the transcript. Attribute each item to the speaker who committed to it. Include the exact words used if possible. Leave Due blank if no date was mentioned.",
+            "format": "list",
+            "item_format": "| **Owner** | Task | Due | Priority | Source Quote |\\n| --- | --- | --- | --- | --- |"
+        },
+        {
+            "title": "Blockers & Risks",
+            "instruction": "List every blocker, risk, dependency or concern that was raised. Note who raised it and any proposed mitigations.",
+            "format": "list",
+            "item_format": "- **[Blocker/Risk]** — raised by [Speaker]: [details and proposed mitigation if any]"
+        },
+        {
+            "title": "Discussion Highlights",
+            "instruction": "Summarize the main topics discussed in order, capturing key points and outcomes per topic. Include speaker names where relevant.",
+            "format": "paragraph"
+        },
+        {
+            "title": "Next Steps",
+            "instruction": "List the agreed next steps and follow-up meetings or reviews. Include owners and timelines where specified.",
+            "format": "list",
+            "item_format": "- [Next step] — Owner: [Name], By: [date or 'TBD']"
+        }
+    ]
+}
